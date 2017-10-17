@@ -1,5 +1,4 @@
 function Project() {
-	Iteration();
 	this.iteration = 0;
 }
 

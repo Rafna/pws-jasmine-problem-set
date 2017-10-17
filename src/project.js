@@ -8,7 +8,8 @@ Project.prototype.addIteration = function(iteration) {
 }
 
 Project.prototype.velocity = function() {
-	return Iteration.prototype.totalPoints.call(this)/this.iteration;
+	var averagePoints = Iteration.prototype.totalPoints();
+	return averagePoints/this.iteration;
 }
 
 

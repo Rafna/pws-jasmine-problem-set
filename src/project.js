@@ -1,14 +1,13 @@
 function Project() {
-	this.iteration = 0;
+	this.iterationCount = [];
+	this.totalIterationPoints = 0;
 }
-
 Project.prototype.addIteration = function(iteration) {
-	this.iteration += iteration;
-}
+	this.iterationCount.push(iteration);
+	this.totalIterationPoints += iteration.totalPoints();
+};
 
 Project.prototype.velocity = function() {
-	var averagePoints = Iteration.prototype.totalPoints();
-	return averagePoints/this.iteration;
+	return this.totalIterationPoints / this.iterationCount.length;
 }
-
 
